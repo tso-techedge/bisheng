@@ -52,8 +52,13 @@ services:
     restart: on-failure
 
   backend:
+<<<<<<< HEAD
     container_name: tsoai-backend
     image: dataelement/bisheng-backend:v1.1.1
+=======
+    container_name: bisheng-backend
+    image: dataelement/bisheng-backend:v1.2.0
+>>>>>>> upstream/main
     ports:
       - "7860:7860"
     environment:
@@ -92,9 +97,14 @@ services:
         condition: service_started
 
   frontend:
+<<<<<<< HEAD
     container_name: tsoai-frontend
     build: ../src/frontend
     image: tsoai-frontend:v1.1.1
+=======
+    container_name: bisheng-frontend
+    image: dataelement/bisheng-frontend:v1.2.0
+>>>>>>> upstream/main
     ports:
       - "3001:3001"
     environment:
